@@ -1,15 +1,25 @@
 import React from 'react'
 import Card from '../Components/Card'
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+import { Link, Outlet } from 'react-router-dom'
+import { useContextGlobal } from '../Components/utils/global.context'
 
 const Home = () => {
+
+  const {dentists} = useContextGlobal()
+  
   return (
-    <main className="" >
-      <h1>Home</h1>
+    <main >
       <div className='card-grid'>
-        {/* Aqui deberias renderizar las cards */}
+       
+        {dentists?.length ? dentists.map((dentist) => ( 
+            <Link key={dentist.id}  to={`/details/${dentist.id}`}  >
+                <Card dentist={dentist}/>
+            </Link> ))
+            :null
+          }
+
       </div>
+      <Outlet/>
     </main>
   )
 }
