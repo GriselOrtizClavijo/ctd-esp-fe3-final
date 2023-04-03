@@ -4,9 +4,9 @@ import { reducerAddFav } from "../reducer";
 const initialState = [];
 
 const Card = ({dentist, favs, setFavs}) => {
-  
+  let addFavImg = <img className="star" src={window.location.origin + '/images/star.png'} alt="Imagen no disponible"/>
   const [state, dispatch] = useReducer(reducerAddFav, initialState);
-  const [add, setAdd] = useState('Add fav')
+  const [add, setAdd] = useState(addFavImg)
 
   const addFav = (e) => {
     e.preventDefault()
@@ -36,7 +36,7 @@ const Card = ({dentist, favs, setFavs}) => {
         }]) 
         
       )  
-      alert('The dentist has been added')
+      alert(`The dentist ${dentist.name} has been added`)
       console.log(state);
   }
  

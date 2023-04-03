@@ -29,7 +29,7 @@ const Form = () => {
     
     if(newUser.name.length > 5 && emailTest) {
         dispatch({type:'addData', payload: newUser})
-        setError(`Gracias  ${newUser.name}   te contactaremos cuando antes vía mail`)
+        setError(`Gracias  ${newUser.name}   te contactáremos cuanto antes vía mail`)
       } else {
         setError('Por favor verifique su información nuevamente')
       }
