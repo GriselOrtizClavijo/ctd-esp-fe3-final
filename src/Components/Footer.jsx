@@ -8,11 +8,11 @@ const Footer = () => {
         <p>DH ODONTO</p>
         </div>
         <p>Powered by</p>
-        <img src={window.location.origin + '/images/DH.png'} alt='DH-logo' />
-        <img className='icons' src={window.location.origin + '/images/ico-facebook.png'} alt='DH-logo' />
-        <img className='icons' src={window.location.origin + '/images/ico-instagram.png'} alt='DH-logo' />
-        <img className='icons' src={window.location.origin + '/images/ico-tiktok.png'} alt='DH-logo' />
-        <img className='icons' src={window.location.origin + '/images/ico-whatsapp.png'} alt='DH-logo' />
+        <img src='/images/DH.png' alt='DH-logo' />
+        <img className='icons' src='/images/ico-facebook.png' alt='DH-logo' />
+        <img className='icons' src='/images/ico-instagram.png' alt='DH-logo' />
+        <img className='icons' src='/images/ico-tiktok.png' alt='DH-logo' />
+        <img className='icons' src='/images/ico-whatsapp.png' alt='DH-logo' />
     </footer>
   )
 }

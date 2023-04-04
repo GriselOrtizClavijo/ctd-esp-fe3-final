@@ -2,10 +2,6 @@ import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useContextGlobal } from '../Components/utils/global.context'
 
-
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
-
 const Detail = () => {
   const {dentists} = useContextGlobal()
 
@@ -29,7 +25,7 @@ const Detail = () => {
             </thead>
             <tbody>
               <tr>
-                <td><img className="avatar imgTable" src={window.location.origin + '/images/doctor.jpg'} alt="Imagen no disponible"/></td>
+                <td><img className="avatar imgTable" src='/images/doctor.jpg' alt="Imagen no disponible"/></td>
                 <td>{dentistSelect.name}</td>
                 <td>{dentistSelect.email}</td>
                 <td>{dentistSelect.phone}</td>

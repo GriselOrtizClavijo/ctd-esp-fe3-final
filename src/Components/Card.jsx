@@ -4,7 +4,7 @@ import { reducerAddFav } from "../reducer";
 const initialState = [];
 
 const Card = ({dentist, favs, setFavs}) => {
-  let addFavImg = <img className="star" src={window.location.origin + '/images/star.png'} alt="Imagen no disponible"/>
+  let addFavImg = <img className="star" src='/images/star.png' alt="Imagen no disponible"/>
   const [state, dispatch] = useReducer(reducerAddFav, initialState);
   const [add, setAdd] = useState(addFavImg)
 
@@ -44,7 +44,7 @@ const Card = ({dentist, favs, setFavs}) => {
   return (
     <>
     <div className="card">
-          <img className="avatar" src={window.location.origin + '/images/doctor.jpg'} alt="Imagen no disponible"/>
+          <img className="avatar" src='/images/doctor.jpg' alt="Imagen no disponible"/>
           <h2 className="name">{dentist.name}</h2>
           <h4 className="name">{dentist.username}</h4>
           <button onClick= {addFav} className="favButton">{add}</button>

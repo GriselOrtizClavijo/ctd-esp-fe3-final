@@ -13,14 +13,14 @@ const Navbar = () => {
  
   return (
     <nav className={`header ${state.isDark ? 'dark' : 'light'}`}>
-      <img className='imageDh' src={window.location.origin + '/images/DH.png'} alt="Imagen no disponible"/>
+      <img className='imageDh' src= '/images/DH.png' alt="Imagen no disponible"/>
         <div className='links'>
           <Link to={routes.home}><h4> Home </h4></Link> 
           <Link to={routes.contact}><h4> Contact</h4></Link> 
           <Link to={routes.favs}><h4> Favs </h4></Link>
         </div>
-      {/* <button className='buttoNav' onClick = {changeTheme}>Change theme</button> */}
-      <img className='buttoNav' onClick = {changeTheme} src={window.location.origin + '/images/sunMoon.png'} alt="" />
+
+      <img className='buttoNav' onClick = {changeTheme} src='/images/sunMoon.png' alt="" />
     </nav>
   )
 }

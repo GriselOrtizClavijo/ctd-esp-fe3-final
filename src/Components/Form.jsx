@@ -43,7 +43,7 @@ const Form = () => {
           <input type='text' name="name" onChange={handleChange}/>
           </label>
           <label>Email
-          <input type='email' name="email" onChange={handleChange}/>
+          <input  name="email" onChange={handleChange}/>
           </label>
               <button className="favButton">Enviar</button>
               <br/>
