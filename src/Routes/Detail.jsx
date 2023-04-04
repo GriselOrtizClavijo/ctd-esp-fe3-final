@@ -17,12 +17,6 @@ const Detail = () => {
     <>
       <h1>Detail Dentist id </h1>
       <div className='divTable'>
-        
-      {/* <h2 className='name'>Name: {dentistSelect.name}</h2>
-        <img className="avatar" src={window.location.origin + '/images/doctor.jpg'} alt="Imagen no disponible"/>
-        <h4 className='name'>Email: {dentistSelect.email}</h4>
-        <h4 className='name'>Phone: {dentistSelect.phone}</h4>
-        <h4 className='name'>Website: {dentistSelect.website}</h4> */}
         <table>
             <thead>
               <tr>
