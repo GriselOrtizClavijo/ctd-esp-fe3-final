@@ -3,7 +3,7 @@ import { reducerAddFav } from "../reducer";
 
 const initialState = [];
 
-const Card = ({dentist, favs, setFavs}) => {
+const Card = ({dentist}) => {
   let addFavImg = <img className="star" src='/images/star.png' alt="Imagen no disponible"/>
   const [state, dispatch] = useReducer(reducerAddFav, initialState);
   const [add, setAdd] = useState(addFavImg)
@@ -21,9 +21,9 @@ const Card = ({dentist, favs, setFavs}) => {
       (f) => f.name === dentist.name && f.username === dentist.username 
       )
           if(saveFavs){
-            setAdd('Added')
             return
           }
+            
           dispatch({
             type: 'addFav',
             payload: { name: dentist.name, username: dentist.username },
@@ -37,6 +37,7 @@ const Card = ({dentist, favs, setFavs}) => {
         
       )  
       alert(`The dentist ${dentist.name} has been added`)
+      setAdd('Added')
       console.log(state);
   }
  
