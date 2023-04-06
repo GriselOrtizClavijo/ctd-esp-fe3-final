@@ -16,6 +16,12 @@ code {
     monospace;
 }
 
+h1{
+  text-align: center;
+}
+
+/*Estilos de botón favoritos*/
+
 .favButton{
   background-color: rgba(136, 136, 136, 0.116);
   padding: 10px;
@@ -29,14 +35,7 @@ code {
   background-color: #dddddd83;
 }
 
-
-h1{
-  text-align: center;
-}
-
-h2{
-  font-size: 1.2rem;
-}
+/*Estilos de barra de navegación*/
 
 nav.header {
   display: flex;
@@ -55,9 +54,7 @@ nav.header .links a {
 }
 
 .links {
-  margin-left: 80rem;
-  display: flex;
-  max-width: auto;
+  margin-left: 86rem;
 }
 
 nav.header .favButton {
@@ -78,10 +75,12 @@ nav{
 .dark nav a{
   color: white;
 }
+
 .imageDh{
-  width: 12rem;
+  width: 10rem;
   height: 2.5rem;
-  padding-top: 1rem;
+  padding: 1rem 0 0 1rem;
+  
 }
 
 .buttoNav{
@@ -111,6 +110,8 @@ a:hover{
   color: rgb(136, 136, 136);
 } 
 
+/*Estilos del footer*/
+
 footer {
   display: flex;
   justify-content: center;
@@ -137,7 +138,6 @@ footer > img{
 .dark footer .icons{
   filter: invert(0);
 }
-
 
 .icons {
   width: 15px;
@@ -174,6 +174,7 @@ footer > p{
  
 }
 
+/*Estilos de Constacto y Form*/
 
 .contact{
   margin: 3rem 0 3rem 3rem
@@ -214,6 +215,8 @@ form .favButton{
   align-self: center;
 }
 
+/*Estilos de las cards*/
+
 .card{
   display: flex;
   justify-content: space-around;
@@ -224,6 +227,11 @@ form .favButton{
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 1px solid rgb(136, 136, 136);
   border-radius: 10px;
+}
+
+.avatar {
+  width: 15vh;
+  height: 15vh;
 }
 
 .dark .card {
@@ -241,6 +249,10 @@ form .favButton{
   font-style:normal;
 }
 
+h2, .name {
+  font-size: 1.2rem;
+}
+
 .dark .name {
   color: white;
 }
@@ -256,6 +268,7 @@ form .favButton{
   margin-top: 5px;
   
 }
+
 .buttonBack {
   border-radius: 2rem;
   height: 2rem;
@@ -263,6 +276,8 @@ form .favButton{
   font-size: 0.7rem;
   border: slategrey;
 }
+
+/*Estilos de los detalles*/
 
 .imgTable {
   width: 4rem !important;
@@ -307,11 +322,9 @@ tbody, thead:nth-child(even) {
   background-color: #dddddd;
 }
 
-.avatar {
-  width: 15vh;
-  height: 15vh;
-}
+
 /*Clases para el tema claro*/
+
 .light {
   background-color: white;
   color: black;

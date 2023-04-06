@@ -13,7 +13,7 @@ const Navbar = () => {
  
   return (
     <nav className={`header ${state.isDark ? 'dark' : 'light'}`}>
-      <img className='imageDh' src= '/images/DH.png' alt="Imagen no disponible"/>
+      <img className='imageDh' src= '/images/dhOdonto.png' alt="Imagen no disponible"/>
         <div className='links'>
           <Link to={routes.home}><h4> Home </h4></Link> 
           <Link to={routes.contact}><h4> Contact</h4></Link> 
