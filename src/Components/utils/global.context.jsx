@@ -26,8 +26,7 @@ const ContextProvider = ({ children }) => {
       return (
         <ContextGlobal.Provider value={
           {dentists, setDentist, stateTheme, dispatch, changeTheme }}>
-            {children}
-           
+            {children}   
         </ContextGlobal.Provider>
       );
 };
