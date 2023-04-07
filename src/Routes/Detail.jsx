@@ -3,11 +3,11 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { useContextGlobal } from '../Components/utils/global.context'
 
 const Detail = () => {
-  const {dentists} = useContextGlobal()
+  const {stateDentist} = useContextGlobal()
 
   const navigate = useNavigate();
   const params = useParams();
-  const dentistSelect = dentists.find((dentist) => parseInt(params.id) === dentist.id)
+  const dentistSelect = stateDentist.find((dentist) => parseInt(params.id) === dentist.id)
 
   return (
     <>

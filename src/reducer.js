@@ -1,3 +1,12 @@
+export const reducerDentist= (state, action) => {
+    switch (action.type) {
+        case "getDentist":
+            return action.payload
+        default:
+            throw new Error();
+      } 
+}
+
 
 export const reducerTheme = (state, action) => {
     switch (action.type) {

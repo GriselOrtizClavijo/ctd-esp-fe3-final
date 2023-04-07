@@ -5,13 +5,13 @@ import { useContextGlobal } from '../Components/utils/global.context'
 
 const Home = () => {
 
-  const {dentists} = useContextGlobal()
+  const {stateDentist} = useContextGlobal()
   
   return (
     <main >
       <div className='card-grid'>
        
-        {dentists?.length ? dentists.map((dentist) => ( 
+        {stateDentist?.length ? stateDentist.map((dentist) => ( 
             <Link key={dentist.id}  to={`/details/${dentist.id}`}  >
                 <Card dentist={dentist}/>
             </Link> ))

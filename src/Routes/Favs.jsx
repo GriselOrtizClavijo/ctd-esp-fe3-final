@@ -1,31 +1,33 @@
 import { useEffect, useReducer} from "react";
 import Card from "../Components/Card";
-import { reducerFavs } from "../reducer";
+import { useContextGlobal } from "../Components/utils/global.context";
+// import {deleteFav} from '../Components/utils/global.context'
+// import { reducerFavs } from "../reducer";
 
-const initialState = { saveFavs: [] };
+// const initialState = { saveFavs: [] };
 
 const Favs = () => {
 
-  const [state, dispatch] = useReducer(reducerFavs, initialState);
+  const {stateFavs, deleteFav} = useContextGlobal()
 
+  // const [state, dispatch] = useReducer(reducerFavs, initialState);
 
+  // useEffect(() => {
+  //   const listFavs = localStorage.getItem('Favs')
+  //   if(listFavs){
+  //     dispatch({ type: "setFavs", payload: JSON.parse(listFavs) });
+  //   }
+  // }, [])
 
-  useEffect(() => {
-    const listFavs = localStorage.getItem('Favs')
-    if(listFavs){
-      dispatch({ type: "setFavs", payload: JSON.parse(listFavs) });
-    }
-  }, [])
-
-  const deleteFav = (name, username) => {
-    dispatch({ type: "deleteFavs", payload: { name, username } });
-  }
+  // const deleteFav = (name, username) => {
+  //   dispatch({ type: "deleteFavs", payload: { name, username } });
+  // }
 
   return (
     <>
       <h1>Dentists Favs</h1>
         <div className="card-grid">
-         {state.saveFavs.length > 0 ? state.saveFavs.map(fav => (
+         {stateFavs.saveFavs.length > 0 ? stateFavs.saveFavs.map(fav => (
             <div key={fav.name + fav.username}>
                 <Card dentist={fav}/> 
                 <button onClick={()=> deleteFav(fav.name, fav.username) } 
