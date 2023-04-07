@@ -33,7 +33,7 @@ const ContextProvider = ({ children }) => {
       if(listFavs){
         dispatch({ type: "setFavs", payload: JSON.parse(listFavs) });
       }
-    }, [])
+    }, [stateFavs])
 
     const deleteFav = (name, username) => {
          dispatch({ type: "deleteFavs", payload: { name, username } });
