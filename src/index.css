@@ -39,7 +39,8 @@ h1{
 
 nav.header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
   background-color: rgb(249, 237, 240); 
   max-height: 10rem;
   max-width: 100%
@@ -69,7 +70,8 @@ nav.header .links a {
 .imageDh{
   width: 10rem;
   height: 2.5rem;
-  padding: 1rem 0 0 0;
+  padding: 0;
+  margin: 0;
 }
 
 .buttoNav{
