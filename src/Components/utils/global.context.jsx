@@ -1,20 +1,18 @@
 import { createContext, useContext, useEffect, useReducer, useState } from "react";
-import { reducer } from "../../reducer";
+import { reducerTheme } from "../../reducer";
 
 export const initialState = {theme: "light", isDark : false}
 
 export const ContextGlobal = createContext();
 
 const ContextProvider = ({ children }) => {
-  //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
-    const [state, dispatch] = useReducer(reducer, initialState);
-
+ 
+    const [stateTheme, dispatch] = useReducer(reducerTheme, initialState);
     const[dentists, setDentist] = useState([])
 
     const changeTheme = () =>{
-      dispatch({ type: "change_theme", payload: !state.isDark })
-      console.log(state);
-    
+      dispatch({ type: "change_theme", payload: !stateTheme.isDark })
+      console.log(stateTheme);
     }
 
     const url = 'https://jsonplaceholder.typicode.com/users'
@@ -27,7 +25,7 @@ const ContextProvider = ({ children }) => {
 
       return (
         <ContextGlobal.Provider value={
-          {dentists, setDentist, state, dispatch, changeTheme }}>
+          {dentists, setDentist, stateTheme, dispatch, changeTheme }}>
             {children}
            
         </ContextGlobal.Provider>

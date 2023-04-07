@@ -2,17 +2,13 @@ import { routes } from '../routes'
 import { Link } from 'react-router-dom'
 import {useContextGlobal} from '../Components/utils/global.context'
 
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
-
-
 const Navbar = () => {
 
-  const{changeTheme, state} = useContextGlobal()
+  const{changeTheme, stateTheme} = useContextGlobal()
  
  
   return (
-    <nav className={`header ${state.isDark ? 'dark' : 'light'}`}>
+    <nav className={`header ${stateTheme.isDark ? 'dark' : 'light'}`}>
       <img className='imageDh' src= '/images/dhOdonto.png' alt="Imagen no disponible"/>
         <div className='links'>
           <Link to={routes.home}><h4> Home </h4></Link> 

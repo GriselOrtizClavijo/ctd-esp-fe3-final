@@ -1,5 +1,5 @@
 
-export const reducer = (state, action) => {
+export const reducerTheme = (state, action) => {
     switch (action.type) {
         case "change_theme":
             return { ...state,

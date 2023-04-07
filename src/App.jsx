@@ -11,10 +11,10 @@ import { useContextGlobal } from "./Components/utils/global.context";
 
 
 function App() {
-  const { changeTheme, state} = useContextGlobal()
+  const { changeTheme, stateTheme} = useContextGlobal()
 
   return (
-      <div className={`App ${state.isDark ? 'dark' : 'light'}`} changeTheme = {changeTheme}>
+      <div className={`App ${stateTheme.isDark ? 'dark' : 'light'}`} changeTheme = {changeTheme}>
         <Navbar/>
         {/* <div className="main-container"> */}
           <Routes>
