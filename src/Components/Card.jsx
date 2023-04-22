@@ -1,4 +1,5 @@
 import  { React,useReducer, useState} from "react";
+import Swal from "sweetalert2";
 import { reducerAddFav } from "../reducer";
 
 const initialState = [];
@@ -36,7 +37,8 @@ const Card = ({dentist}) => {
         }]) 
         
       )  
-      alert(`The dentist ${dentist.name} has been added`)
+      Swal.fire('¡Muy bien!', `The dentist ${dentist.name} has been added`)
+      // alert(`The dentist ${dentist.name} has been added`)
       setAdd('Added')
       console.log(state);
   }
